@@ -7,12 +7,13 @@
 	<authorUrl>http://www.redcomponent.com</authorUrl>
 	<copyright>Copyright redComponent 2013. All rights reserved</copyright>
 	<license>GNU/GPL v.3 or later.</license>
-	<version>1.5</version>
+	<version>0.0.5</version>
     <description>TPL_%%UPNAME%%_XML_DESCRIPTION</description>
 
 	<files>
 		<filename>component.php</filename>
 		<filename>functions.php</filename>
+		<filename>home.php</filename>
 		<filename>index.php</filename>
 		<filename>template.php</filename>
 		<filename>templateDetails.xml</filename>
@@ -128,7 +129,7 @@
 					label="TPL_%%UPNAME%%_LOGO_SPACER_LABEL"/>
 				<field name="logo"
 					type="logo"
-					default="template"
+					default="module"
 					label="TPL_%%UPNAME%%_FIELD_LOGO_IMAGE_LABEL"
 					description="TPL_%%UPNAME%%_FIELD_LOGO_IMAGE_DESC" />
 

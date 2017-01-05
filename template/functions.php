@@ -11,6 +11,8 @@
 // Restrict Access to within Joomla
 defined('_JEXEC') or die('Restricted access');
 
+$document->addStyleSheet($this->baseurl . '/templates/jmarkos012/css/template.css' );
+
 $bodyclass = "";
 
 if ($this->countModules('toolbar'))

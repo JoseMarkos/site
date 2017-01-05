@@ -5,6 +5,10 @@ $bootstrap-sass-asset-helper: false !default;
 
 
 //== Colors
+
+$color-two: #202a46;
+$color-three: #6d748c;
+
 //
 //## Gray and brand colors for use across Bootstrap.
 
@@ -27,9 +31,9 @@ $brand-danger: #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg: #fffff0 !default;
+$body-bg: #fff !default;
 //** Global text color on `<body>`.
-$text-color: $gray-dark !default;
+$text-color: $color-two !default;
 
 //** Global textual link color.
 $link-color: $brand-primary !default;
@@ -49,7 +53,7 @@ $font-family-serif: Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base: $font-family-serif !default;
 
-$font-size-base: 16px !default;
+$font-size-base: 18px !default;
 $font-size-large: ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small: ceil(($font-size-base * 0.85)) !default; // ~12px
 
@@ -765,7 +769,7 @@ $thumbnail-caption-padding: 9px !default;
 //
 //##
 
-$well-bg: #f5f5f5 !default;
+$well-bg: $color-two !default;
 $well-border: darken($well-bg, 7%) !default;
 
 

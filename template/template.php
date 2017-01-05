@@ -21,7 +21,7 @@ defined('_JEXEC') or die('Restricted access');
             ## Danmark                              ##
             ## email@redweb.dk             			##
             ## http://www.redweb.dk          		##
-            ## Dato: %%datebuild%%                  ##
+            ## Dato: 2016-12-24                  ##
             ##########################################
         -->
 
@@ -33,12 +33,11 @@ defined('_JEXEC') or die('Restricted access');
 		<w:nav containerClass="container" rowClass="row" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
 	<?php endif; ?>
 
+
 	<div class="container">
 		<!-- header -->
-		<header id="header">
-			<div class="row clearfix">
-                <w:logo name="top" />
-				<div class="clear"></div>
+		<header>
+			<div class="row">
 			</div>
 		</header>
 		<?php if ($this->countModules('menu')) : ?>
@@ -65,13 +64,13 @@ defined('_JEXEC') or die('Restricted access');
 				<w:module type="row" name="grid-top2" chrome="wrightflexgrid" />
 			</div>
 		<?php endif; ?>
-		<div id="main-content" class="row">
+		<div id="main-content" class="row flex">
 			<!-- sidebar1 -->
 			<aside id="sidebar1">
 				<w:module name="sidebar1" chrome="whtml" />
 			</aside>
 			<!-- main -->
-			<section id="main">
+			<section id="main" class="p-b-2">
 				<?php if ($this->countModules('above-content')) : ?>
 					<!-- above-content -->
 					<div id="above-content">
@@ -128,7 +127,7 @@ defined('_JEXEC') or die('Restricted access');
 		</footer>
 	</div>
 
-    <w:footer />
+	<w:footer />
 
 	</body>
-	</html>
+</html>

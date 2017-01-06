@@ -329,3 +329,15 @@ strong {
 .well {
 	border-radius: 0;
 }
+
+.bracket {
+  height: 60vh;
+}
+
+#sidebar2 {
+  position: static;
+}
+
+.label-info {
+  @extend .color-white;
+}

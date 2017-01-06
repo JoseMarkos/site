@@ -36,6 +36,7 @@ defined('_JEXEC') or die('Restricted access');
 	<!-- menu -->
 	<w:nav containerClass="container" rowClass="row" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
 	<?php endif; ?>
+  <img src="<?php echo $this->baseurl . '/templates/jmarkos010001/images/';?>bracket.svg" alt="bracket" class="bracket m-y-auto m-x-auto absolute right-0 left-0 top-0 bottom-0">
 	<div class="container">
 		<header>
 		</header>

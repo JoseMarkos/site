@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.0 r"
-   sodipodi:docname="llave.svg">
+   sodipodi:docname="bracket.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="-155.7101"
-     inkscape:cy="575.81243"
+     inkscape:cx="-206.09136"
+     inkscape:cy="600.78502"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -55,17 +55,6 @@
      id="layer1">
     <flowRoot
        xml:space="preserve"
-       id="flowRoot18"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:25px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       transform="matrix(7.7811533,0,0,7.7811533,-394.17922,177.02583)"><flowRegion
-         id="flowRegion20"><rect
-           id="rect22"
-           width="534.28571"
-           height="791.42859"
-           x="51.42857"
-           y="-14.623172" /></flowRegion><flowPara
-         id="flowPara24">{</flowPara></flowRoot>    <flowRoot
-       xml:space="preserve"
        id="flowRoot10"
        style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:25px;letter-spacing:0px;word-spacing:0px"><flowRegion
          id="flowRegion12"><rect
@@ -74,5 +63,11 @@
            height="440"
            x="85.714287"
            y="336.80539" /></flowRegion><flowPara
-         id="flowPara16"></flowPara></flowRoot>  </g>
+         id="flowPara16" /></flowRoot>    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 164.79762,4.8244042 0.18899,21.9226188 c -33.73494,-1.431729 -42.49132,4.503929 -44.31771,25.418898 -3.34861,50.888979 11.16645,79.189529 -30.427085,96.572919 41.747325,8.41786 27.367655,58.08158 30.489155,93.34112 -0.34112,27.26152 15.28878,26.93674 30.17602,27.89473 l 14.07962,0.2835 0.0945,21.63914 c -12.88451,-2.28962 -62.55269,6.9486 -70.49256,-30.71058 -4.388526,-13.05749 -1.769212,-44.33537 -2.645833,-66.52381 0.24752,-19.67708 -8.060616,-30.3911 -22.773065,-34.39583 l -24.379465,-1.13393 0.0945,-21.29358 c 19.230803,-0.50692 33.239097,0.72281 43.278273,-15.11905 7.69594,-16.46013 3.840419,-48.803522 4.25223,-75.27933 2.577442,-20.992257 9.89038,-38.5823097 38.17559,-41.1049109 10.50729,-1.0633373 21.68879,-1.7052905 34.20684,-1.5119049 z"
+       id="path27"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccccccc" />
+  </g>
 </svg>

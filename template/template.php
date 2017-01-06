@@ -15,13 +15,13 @@ defined('_JEXEC') or die('Restricted access');
 	<head>
 		<!--
             ##########################################
-            ## redWEB ApS                     		##
+            ## redWEB ApS                     			##
             ## Blangstedgaardsvej 1                 ##
             ## 5220 Odense SØ                       ##
             ## Danmark                              ##
-            ## email@redweb.dk             			##
-            ## http://www.redweb.dk          		##
-            ## Dato: 2016-12-24                  ##
+            ## email@redweb.dk             					##
+            ## http://www.redweb.dk          				##
+            ## Dato: %%datebuild%%                  ##
             ##########################################
         -->
 

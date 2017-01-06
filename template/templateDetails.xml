@@ -129,7 +129,7 @@
 					label="TPL_%%UPNAME%%_LOGO_SPACER_LABEL"/>
 				<field name="logo"
 					type="logo"
-					default="module"
+					default="template"
 					label="TPL_%%UPNAME%%_FIELD_LOGO_IMAGE_LABEL"
 					description="TPL_%%UPNAME%%_FIELD_LOGO_IMAGE_DESC" />
 

@@ -11,7 +11,7 @@
 // Restrict Access to within Joomla
 defined('_JEXEC') or die('Restricted access');
 
-$document->addStyleSheet($this->baseurl . '/templates/jmarkos012/css/template.css' );
+$document->addStyleSheet($this->baseurl . '/templates/jmarkos010001/css/template.css' );
 
 $bodyclass = "";
 

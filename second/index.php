@@ -38,7 +38,6 @@ else
 }
 
 // Add JavaScript Frameworks
-JHtml::_('bootstrap.framework');
 
 // Add template js
 JHtml::_('script', 'template.js', array('version' => 'auto', 'relative' => true));

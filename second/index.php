@@ -46,6 +46,7 @@ JHtml::_('script', 'template.js', array('version' => 'auto', 'relative' => true)
 JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true, 'conditional' => 'lt IE 9'));
 
 // Add Stylesheets
+JHtml::_('stylesheet', 'iconmoon.css', array('version' => 'auto', 'relative' => true));
 JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => true));
 
 // Use of Google Font
@@ -63,22 +64,13 @@ if ($this->params->get('templateColor'))
 {
 	$this->addStyleDeclaration('
 	body.site {
-		border-top: 3px solid ' . $this->params->get('templateColor') . ';
 		background-color: ' . $this->params->get('templateBackgroundColor') . ';
-	}
-	a {
 		color: ' . $this->params->get('templateColor') . ';
 	}
-	.nav-list > .active > a,
-	.nav-list > .active > a:hover,
-	.dropdown-menu li > a:hover,
-	.dropdown-menu .active > a,
-	.dropdown-menu .active > a:hover,
-	.nav-pills > .active > a,
-	.nav-pills > .active > a:hover,
-	.btn-primary {
-		background: ' . $this->params->get('templateColor') . ';
-	}');
+	a {
+		color: ' . $this->params->get('templateLinkColor') . ';
+	}
+	');
 }
 
 // Check for a custom CSS file
@@ -90,23 +82,30 @@ JHtml::_('script', 'user.js', array('version' => 'auto', 'relative' => true));
 // Load optional RTL Bootstrap CSS
 JHtml::_('bootstrap.loadCss', false, $this->direction);
 
+$contentClass = '';
+
 // Adjusting content width
 if ($this->countModules('position-7') && $this->countModules('position-8'))
 {
-	$span = 'span6';
+	$col = 'col-6';
 }
 elseif ($this->countModules('position-7') && !$this->countModules('position-8'))
 {
-	$span = 'span9';
+	$col = 'col-6';
 }
 elseif (!$this->countModules('position-7') && $this->countModules('position-8'))
 {
-	$span = 'span9';
+	$col = 'col-9';
 }
 else
 {
-	$span = 'span12';
+	$col = 'col-12';
 }
+
+if ($this->countModules('position-2')) {
+	$contentClass = 'flex items-center justify-center full-height bg-color-four color-one';
+}
+
 
 // Logo file or site title param
 if ($this->params->get('logoFile'))
@@ -128,7 +127,7 @@ else
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<jdoc:include type="head" />
 </head>
-<body class="site <?php echo $option
+<body class="m0 site <?php echo $option
 	. ' view-' . $view
 	. ($layout ? ' layout-' . $layout : ' no-layout')
 	. ($task ? ' task-' . $task : ' no-task')
@@ -140,22 +139,21 @@ else
 	<div class="body" id="top">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
 			<!-- Header -->
-			<header class="header" role="banner">
+			<header class="header p2 max-width-3 mx-auto display-none" role="banner">
 				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="<?php echo $this->baseurl; ?>/">
-						<?php echo $logo; ?>
+					<a class="brand left" href="<?php echo $this->baseurl; ?>/">
 						<?php if ($this->params->get('sitedescription')) : ?>
 							<?php echo '<div class="site-description">' . htmlspecialchars($this->params->get('sitedescription'), ENT_COMPAT, 'UTF-8') . '</div>'; ?>
 						<?php endif; ?>
 					</a>
-					<div class="header-search pull-right">
+					<div class="header-search right">
 						<jdoc:include type="modules" name="position-0" style="none" />
 					</div>
 				</div>
 			</header>
 			<?php if ($this->countModules('position-1')) : ?>
 				<nav class="navigation" role="navigation">
-					<div class="navbar pull-left">
+					<div class="navbar pull-left max-width-3 mx-auto">
 						<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
 							<span class="element-invisible"><?php echo JTEXT::_('TPL_PROTOSTAR_TOGGLE_MENU'); ?></span>
 							<span class="icon-bar"></span>
@@ -169,17 +167,17 @@ else
 				</nav>
 			<?php endif; ?>
 			<jdoc:include type="modules" name="banner" style="xhtml" />
-			<div class="row-fluid">
+			<div class="<?php echo $contentClass; ?>">
 				<?php if ($this->countModules('position-8')) : ?>
 					<!-- Begin Sidebar -->
-					<div id="sidebar" class="span3">
+					<div id="sidebar" class="col-3">
 						<div class="sidebar-nav">
 							<jdoc:include type="modules" name="position-8" style="xhtml" />
 						</div>
 					</div>
 					<!-- End Sidebar -->
 				<?php endif; ?>
-				<main id="content" role="main" class="<?php echo $span; ?>">
+				<main id="content" role="main" class="<?php echo $col; ?>">
 					<!-- Begin Content -->
 					<jdoc:include type="modules" name="position-3" style="xhtml" />
 					<jdoc:include type="message" />
@@ -188,7 +186,7 @@ else
 					<!-- End Content -->
 				</main>
 				<?php if ($this->countModules('position-7')) : ?>
-					<div id="aside" class="span3">
+					<div id="aside" class="col-6">
 						<!-- Begin Right Sidebar -->
 						<jdoc:include type="modules" name="position-7" style="well" />
 						<!-- End Right Sidebar -->
@@ -200,16 +198,17 @@ else
 	<!-- Footer -->
 	<footer class="footer" role="contentinfo">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
-			<hr />
 			<jdoc:include type="modules" name="footer" style="none" />
-			<p class="pull-right">
-				<a href="#top" id="back-top">
-					<?php echo JText::_('TPL_PROTOSTAR_BACKTOTOP'); ?>
-				</a>
-			</p>
-			<p>
-				&copy; <?php echo date('Y'); ?> <?php echo $sitename; ?>
-			</p>
+			<section class='max-width-3 mx-auto display-none'>
+				<p class="pull-right">
+					<a href="#top" id="back-top">
+						<?php echo JText::_('TPL_PROTOSTAR_BACKTOTOP'); ?>
+					</a>
+				</p>
+				<p>
+					&copy; <?php echo date('Y'); ?> <?php echo $sitename; ?>
+				</p>
+			</section>
 		</div>
 	</footer>
 	<jdoc:include type="modules" name="debug" style="none" />

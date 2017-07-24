@@ -10,7 +10,7 @@
 {
 	$(document).ready(function()
 	{
-		$('*[rel=tooltip]').tooltip()
+		// $('*[rel=tooltip]').tooltip()
 
 		// Turn radios into btn-group
 		$('.radio.btn-group label').addClass('btn');
@@ -51,7 +51,7 @@
 				$("label[for=" + $(this).attr('id') + "]").addClass('active btn-success');
 			}
 		});
-		
+
 		$('#back-top').on('click', function(e) {
 			e.preventDefault();
 			$("html, body").animate({scrollTop: 0}, 1000);

@@ -22,6 +22,7 @@ $this->setHtml5(true);
 JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true, 'conditional' => 'lt IE 9'));
 
 // Add Stylesheets
+JHtml::_('stylesheet', 'iconmoon.css', array('version' => 'auto', 'relative' => true));
 JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => true));
 
 // Load optional rtl Bootstrap css and Bootstrap bugfixes

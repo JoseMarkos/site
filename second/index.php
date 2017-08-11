@@ -137,7 +137,6 @@ else
 ?>">
 	<!-- Body -->
 	<div class="body" id="top">
-		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
 			<!-- Header -->
 			<header class="header p2 max-width-3 mx-auto display-none" role="banner">
 				<div class="header-inner clearfix">
@@ -182,7 +181,7 @@ else
 					<jdoc:include type="modules" name="position-3" style="xhtml" />
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
-					<jdoc:include type="modules" name="position-2" style="none" />
+					<jdoc:include type="modules" name="position-2" style="xhtml" />
 					<!-- End Content -->
 				</main>
 				<?php if ($this->countModules('position-7')) : ?>
@@ -193,7 +192,6 @@ else
 					</div>
 				<?php endif; ?>
 			</div>
-		</div>
 	</div>
 	<!-- Footer -->
 	<footer class="footer" role="contentinfo">

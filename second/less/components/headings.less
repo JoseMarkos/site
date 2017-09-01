@@ -1,0 +1,19 @@
+
+h1, h2, h3, h4, h5, h6 {
+    .relative;
+
+    &:before {
+        .absolute;
+        .bottom-0;
+        border-bottom: 1px solid @color-two;
+        color: @color-four;
+        content: "";
+        width: 1rem;
+        speak: none;
+    }
+    
+    a {
+        color: initial;
+    }
+}
+

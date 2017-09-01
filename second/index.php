@@ -60,19 +60,6 @@ if ($this->params->get('googleFont'))
 }
 
 // Template color
-if ($this->params->get('templateColor'))
-{
-	$this->addStyleDeclaration('
-	body.site {
-		background-color: ' . $this->params->get('templateBackgroundColor') . ';
-		color: ' . $this->params->get('templateColor') . ';
-	}
-	a {
-		color: ' . $this->params->get('templateLinkColor') . ';
-	}
-	');
-}
-
 // Check for a custom CSS file
 JHtml::_('stylesheet', 'user.css', array('version' => 'auto', 'relative' => true));
 
@@ -103,7 +90,7 @@ else
 }
 
 if ($this->countModules('position-2')) {
-	$contentClass = 'flex items-center justify-center full-height bg-color-four color-one';
+	$contentClass = 'flex items-center justify-center full-height bg-color-four color-one container';
 }
 
 

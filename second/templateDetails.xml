@@ -18,6 +18,7 @@
 		<filename>template_preview.png</filename>
 		<filename>template_thumbnail.png</filename>
 		<folder>css</folder>
+        <folder>fonts</folder>
 		<folder>html</folder>
 		<folder>images</folder>
 		<folder>img</folder>
@@ -51,60 +52,34 @@
 	<config>
 		<fields name="params">
 			<fieldset name="advanced">
-				<field 
-					name="templateLinkColor" 
-					type="color" 
-					label="TPL_SECOND_LINK_COLOR_LABEL"
-					description="TPL_SECOND_LINK_COLOR_DESC" 
-					class="" 
-					default="#08C"
-				/>
-				<field 
-					name="templateColor" 
-					type="color" 
-					label="TPL_SECOND_COLOR_LABEL"
-					description="TPL_SECOND_COLOR_DESC" 
-					class="" 
-					default="#fff"
-				/>
-
-				<field 
-					name="templateBackgroundColor" 
-					type="color" 
-					label="TPL_SECOND_BACKGROUND_COLOR_LABEL"
-					description="TPL_SECOND_BACKGROUND_COLOR_DESC" 
-					class="" 
-					default="#F4F6F7"
-				/>
-
-				<field 
-					name="logoFile" 
-					type="media" 
+				<field
+					name="logoFile"
+					type="media"
 					label="TPL_SECOND_LOGO_LABEL"
-					description="TPL_SECOND_LOGO_DESC" 
-					class="" 
+					description="TPL_SECOND_LOGO_DESC"
+					class=""
 					default=""
 				/>
 
-				<field 
-					name="sitetitle"  
-					type="text" 
+				<field
+					name="sitetitle"
+					type="text"
 					label="JGLOBAL_TITLE"
 					description="JFIELD_ALT_PAGE_TITLE_LABEL"
 					default=""
-					filter="string" 
+					filter="string"
 				/>
 
-				<field 
-					name="sitedescription"  
-					type="text" 
+				<field
+					name="sitedescription"
+					type="text"
 					label="JGLOBAL_DESCRIPTION"
 					description="JGLOBAL_SUBHEADING_DESC"
 					default=""
-					filter="string" 
+					filter="string"
 				/>
 
-				<field 
+				<field
 					name="googleFont"
 					type="radio"
 					label="TPL_SECOND_FONT_LABEL"
@@ -116,17 +91,17 @@
 					<option value="0">JNO</option>
 				</field>
 
-				<field 
-					name="googleFontName" 
-					type="text" 
+				<field
+					name="googleFontName"
+					type="text"
 					label="TPL_SECOND_FONT_NAME_LABEL"
-					description="TPL_SECOND_FONT_NAME_DESC" 
-					class="" 
-					default="Open+Sans"
-					showon="googleFont:1" 
+					description="TPL_SECOND_FONT_NAME_DESC"
+					class=""
+					default="Raleway"
+					showon="googleFont:1"
 				/>
 
-				<field 
+				<field
 					name="fluidContainer"
 					type="radio"
 					label="TPL_SECOND_FLUID_LABEL"

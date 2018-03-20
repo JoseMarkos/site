@@ -185,11 +185,7 @@ else
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
 			<jdoc:include type="modules" name="footer" style="none" />
 			<section class='max-width-3 mx-auto display-none'>
-				<p class="pull-right">
-					<a href="#top" id="back-top">
-						<?php echo JText::_('TPL_PROTOSTAR_BACKTOTOP'); ?>
-					</a>
-				</p>
+		 
 				<p>
 					&copy; <?php echo date('Y'); ?> <?php echo $sitename; ?>
 				</p>

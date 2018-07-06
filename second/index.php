@@ -1,9 +1,9 @@
 <?php
 /**
  * @package     Joomla.Site
- * @subpackage  Templates.second
+ * @subpackage  Templates.protostar
  *
- * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -52,7 +52,7 @@ JHtml::_('stylesheet', 'template.css', array('version' => 'auto', 'relative' => 
 // Use of Google Font
 if ($this->params->get('googleFont'))
 {
-	JHtml::_('stylesheet', '//fonts.googleapis.com/css?family=' . $this->params->get('googleFontName'));
+	JHtml::_('stylesheet', 'https://fonts.googleapis.com/css?family=' . $this->params->get('googleFontName'));
 	$this->addStyleDeclaration("
 	h1, h2, h3, h4, h5, h6, .site-title {
 		font-family: '" . str_replace('+', ' ', $this->params->get('googleFontName')) . "', sans-serif;
@@ -89,11 +89,6 @@ else
 	$col = 'col-12';
 }
 
-if ($this->countModules('position-2')) {
-	$contentClass = 'flex items-center justify-center full-height bg-color-four color-one container';
-}
-
-
 // Logo file or site title param
 if ($this->params->get('logoFile'))
 {
@@ -114,32 +109,34 @@ else
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<jdoc:include type="head" />
 </head>
-<body class="m0 site <?php echo $option
+<body class="site <?php echo $option
 	. ' view-' . $view
 	. ($layout ? ' layout-' . $layout : ' no-layout')
 	. ($task ? ' task-' . $task : ' no-task')
 	. ($itemid ? ' itemid-' . $itemid : '')
-	. ($params->get('fluidContainer') ? ' fluid' : '');
-	echo ($this->direction === 'rtl' ? ' rtl' : '');
+	. ($params->get('fluidContainer') ? ' fluid' : '')
+	. ($this->direction === 'rtl' ? ' rtl' : '');
 ?>">
 	<!-- Body -->
 	<div class="body" id="top">
+		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
 			<!-- Header -->
-			<header class="header p2 max-width-3 mx-auto display-none" role="banner">
+			<header class="header" role="banner">
 				<div class="header-inner clearfix">
-					<a class="brand left" href="<?php echo $this->baseurl; ?>/">
+					<a class="brand pull-left" href="<?php echo $this->baseurl; ?>/">
+						<?php echo $logo; ?>
 						<?php if ($this->params->get('sitedescription')) : ?>
 							<?php echo '<div class="site-description">' . htmlspecialchars($this->params->get('sitedescription'), ENT_COMPAT, 'UTF-8') . '</div>'; ?>
 						<?php endif; ?>
 					</a>
-					<div class="header-search right">
+					<div class="header-search pull-right">
 						<jdoc:include type="modules" name="position-0" style="none" />
 					</div>
 				</div>
 			</header>
 			<?php if ($this->countModules('position-1')) : ?>
 				<nav class="navigation" role="navigation">
-					<div class="navbar pull-left max-width-3 mx-auto">
+					<div class="navbar pull-left">
 						<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
 							<span class="element-invisible"><?php echo JTEXT::_('TPL_PROTOSTAR_TOGGLE_MENU'); ?></span>
 							<span class="icon-bar"></span>
@@ -153,10 +150,10 @@ else
 				</nav>
 			<?php endif; ?>
 			<jdoc:include type="modules" name="banner" style="xhtml" />
-			<div class="<?php echo $contentClass; ?>">
-				<?php if ($this->countModules('position-8')) : ?>
+			<div class="row-fluid">
+				<?php if ($position8ModuleCount) : ?>
 					<!-- Begin Sidebar -->
-					<div id="sidebar" class="col-3">
+					<div id="sidebar" class="span3">
 						<div class="sidebar-nav">
 							<jdoc:include type="modules" name="position-8" style="xhtml" />
 						</div>
@@ -168,23 +165,26 @@ else
 					<jdoc:include type="modules" name="position-3" style="xhtml" />
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
-					<jdoc:include type="modules" name="position-2" style="xhtml" />
+					<div class="clearfix"></div>
+					<jdoc:include type="modules" name="position-2" style="none" />
 					<!-- End Content -->
 				</main>
-				<?php if ($this->countModules('position-7')) : ?>
-					<div id="aside" class="col-6">
+				<?php if ($position7ModuleCount) : ?>
+					<div id="aside" class="span3">
 						<!-- Begin Right Sidebar -->
 						<jdoc:include type="modules" name="position-7" style="well" />
 						<!-- End Right Sidebar -->
 					</div>
 				<?php endif; ?>
 			</div>
+		</div>
 	</div>
 	<!-- Footer -->
 	<footer class="footer" role="contentinfo">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
+			<hr />
 			<jdoc:include type="modules" name="footer" style="none" />
-			<section class='max-width-3 mx-auto display-none'>
+			<section class=''>
 				<p class="pull-right">
 					<a href="#top" id="back-top">
 						<?php echo JText::_('TPL_PROTOSTAR_BACKTOTOP'); ?>
